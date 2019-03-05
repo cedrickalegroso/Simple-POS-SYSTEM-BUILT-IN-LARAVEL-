@@ -1,0 +1,244 @@
+.main-login-wrapper{
+    background-color: rgba(147,206,222,1);
+    height: 100vh;
+    display: grid;
+    grid-template-columns:10%  80%  10%;
+    grid-template-rows: 5%  90%  5%;
+    grid-template-areas: 
+    ". . ."
+    ". main-login-wrapper-wrapper ."
+    ". . .";
+}
+
+
+/* Terms of service modal */
+.modal-body-tos{
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+    height: 500px !important;
+    overflow-y: scroll !important;
+}
+
+
+.main-login-wrapper-wrapper{
+    height: 100%;
+    width: 100%;
+    grid-area: main-login-wrapper-wrapper;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr ;
+    grid-template-areas: 
+    "first-login-section second-login-section";
+}
+
+/* First Section */
+.first-login-section {
+    padding: 50px 5%;
+    grid-area: first-login-section;
+    background-size: cover;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  50% 40% 10% ;
+    grid-template-areas: 
+    "first-login-section-logo"
+    "first-login-section-text"
+    "first-login-section-footer";
+}
+
+.first-login-section-logo{
+   grid-area: first-login-section-logo;
+   text-align: center;
+}
+
+.first-login-section-logo img{
+   height: 256px;
+   width: 256px;
+ }
+
+.first-login-section-text{
+   grid-area: first-login-section-text;
+   color: white;
+   font-size: 120%;
+}
+
+.first-login-section-footer{
+grid-area: first-login-section-footer;
+}
+
+
+/* End of First Section */
+
+
+/* Second Section */
+.second-login-section {
+    padding: 10px 8%;
+    grid-area: second-login-section;
+     background-color: white;
+    
+}
+
+
+
+/* End of Second Section */
+
+
+
+
+
+/* Misc */
+
+.authuser{
+    color:red;
+}
+.version p{
+    text-align: center;
+    color: white;
+}
+
+.login-btn{
+   margin-top: 10%;
+}
+#btn-login{
+    font-size: 30px !important; 
+    width: 100%;
+    padding: 5px 6%;
+}
+
+
+.big-p{
+    font-size: 150%;
+}
+
+.big-headline{
+    font-size: 650%;
+}
+
+#big-headline-2 h1{
+    font-size: 800% !important;
+}
+
+.big-p-2{
+    font-size: 100%;
+}
+
+
+.form-style-8 input[type="text"],
+.form-style-8 input[type="date"],
+.form-style-8 input[type="datetime"],
+.form-style-8 input[type="email"],
+.form-style-8 input[type="number"],
+.form-style-8 input[type="search"],
+.form-style-8 input[type="time"],
+.form-style-8 input[type="url"],
+.form-style-8 input[type="password"],
+.form-style-8 textarea,
+.form-style-8 select 
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+    margin-bottom: 10px;
+	font: 50px Arial, Helvetica, sans-serif;
+	height: 100px;
+}
+.form-style-8 textarea{
+	resize:none;
+	overflow: hidden;
+}
+.form-style-8 input[type="button"], 
+.form-style-8 input[type="submit"]{
+	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	background-color: #2CBBBB;
+	border: 1px solid #27A0A0;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 100px;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.form-style-8 input[type="button"]:hover, 
+.form-style-8 input[type="submit"]:hover {
+	background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+	background-color:#34CACA;
+}
+
+#login-submitinput[type="submit"]{
+	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	background-color: #2CBBBB;
+	border: 1px solid #27A0A0;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 100px;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.has-error{
+    border: 1px solid red;
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .main-login-wrapper{
+        background-size: cover;
+        height: 100%;
+        display: grid;
+        grid-template-columns:10%  80%  10%;
+        grid-template-rows: 5%  90%  5%;
+        grid-template-areas: 
+        "main-login-wrapper-wrapper main-login-wrapper-wrapper main-login-wrapper-wrapper"
+        "main-login-wrapper-wrapper main-login-wrapper-wrapper main-login-wrapper-wrapper"
+        "main-login-wrapper-wrapper main-login-wrapper-wrapper main-login-wrapper-wrapper";
+    }
+    
+    .main-login-wrapper-wrapper{
+        height: 100%;
+        width: 100%;
+        grid-area: main-login-wrapper-wrapper;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "first-login-section"
+        "second-login-section";
+    }
+    
+
+    
+/* Terms of service modal */
+.modal-body-tos{
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+    height: 500px !important;
+    overflow-y: scroll !important;
+}
+
+    
+  }

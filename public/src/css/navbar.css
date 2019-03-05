@@ -1,0 +1,308 @@
+/* wrapper */
+.navbar-wrapper{
+
+    display: grid;
+    height: 60px;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "navbar-search navbar-userdetails";
+    
+}
+
+#small-nav{
+    display: none;
+}
+
+
+.navbar-brand{
+grid-area: navbar-brand;
+display: none;
+}
+
+.navbar-search{
+grid-area: navbar-search;
+background-color: #14487C;
+padding: 12px 1%;
+display: inline-block;
+}
+.navbar-search button {
+    background-color: #0080ff;
+    border: none;
+    position: fixed;
+    border-radius: 30px;
+    font-size: 21px;
+    margin-left: -29px;
+    margin-top: 2px;
+}
+
+.searchbutton-wrap{
+    display: inline-block;
+    background-color: #0080ff;
+    margin-left: -33px;
+    margin-top: 9px;
+    border-radius: 30px;
+    /* background: #ddd; */
+    font-size: 19px;
+    border: none;
+   
+}
+
+.navbar-search input[type=text]{
+   width: 50%;
+   padding: 5px;
+   display: inline-block;
+   border-radius: 30px;
+   border: 1px solid #0080FF ;
+}
+
+#search-submit{
+    height: 10px;
+    padding: 8px 2%;
+  
+}
+
+
+
+.navbar-userdetails-second{
+grid-area: navbar-userdetails-second;
+background: #1A3045;
+line-height: 7vh;
+font-size: 100%;
+height: 100%;
+}
+
+.navbar-userdetails-first ul li {
+    display: inline;
+    word-spacing: 10px;
+    color: white;
+    font-size: 130%;
+    text-align: center;
+}
+
+.navbar-userdetails-second ul li {
+    display: inline;
+    word-spacing: 10px;
+    color: white;
+    font-size: 100%;
+    text-align: center;
+
+}
+
+.navbar-userdetails-second ul li img{
+   margin-top: -5px;
+}
+
+.navbar-userdetails-second ul li  a{
+    color:white !important;
+    text-decoration: none;
+ }
+
+#profileimg-sidebar {
+    margin-top: 3px;
+    margin-left: 9px;
+    border: 2px solid #14487C;
+}
+
+/* Bottom Nav bar */
+.bottom-nav-wrapper{
+ 
+    display: grid;
+    text-align: center;
+    height: 150px;
+    color:white;
+    font-size: 200%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "bottom-nav-1 bottom-nav-2 bottom-nav-3 bottom-nav-4 bottom-nav-5";
+
+}
+
+
+
+.bottom-nav-1{
+    grid-area: bottom-nav-1;
+}
+
+.bottom-nav-1  a {
+    color: white;
+   }
+
+.bottom-nav-2{
+    grid-area: bottom-nav-2;
+}
+
+.bottom-nav-2  a {
+    color: white;
+   }
+
+.bottom-nav-3{
+    grid-area: bottom-nav-3;
+}
+
+.bottom-nav-3  a {
+    color: white;
+   }
+
+.bottom-nav-4{
+    grid-area: bottom-nav-4; 
+}
+
+.bottom-nav-4  a {
+    color: white;
+   }
+
+   .bottom-nav-5{
+    grid-area: bottom-nav-5; 
+}
+
+.bottom-nav-5  a {
+    color: white;
+   }
+
+
+/* bottom navbar misc */
+.bottom-nav-text-small{
+    color:white;
+    font-size: 30%;
+}
+
+
+
+    
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    #small-nav{
+  top: 0;
+  width: 100%;
+        display: inline-block;
+        top: 1;
+        height: 65px;
+        padding: 5px;
+        background-color: #14487C;
+        display: grid;
+        grid-template-columns:10% 60% 30%;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "small-nav-1 small-nav-2 small-nav-3 ";
+
+    }
+    #small-nav-search{
+        margin-left: 25px;
+    }
+
+   
+
+    #small-nav-search input[name='search']{  
+        width: 90%;
+        padding: 5px;
+        margin-top: 10px;
+        border-radius: 30px;
+        border: 1px solid #0080FF;
+    }
+
+    #small-nav-search-button{
+        margin-left: -40px;
+        padding-left: 9px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 9px;
+        border-radius: 180px;
+        border: 1px solid #0080FF;
+        background-color: #0080FF;
+    }
+
+    #small-nav-1{
+        grid-area: small-nav-1;
+        margin-top: 2px;
+    }
+
+    #small-nav-2{
+        grid-area: small-nav-2;
+        
+    }
+
+    #small-nav-3{
+        grid-area: small-nav-3;
+        padding: 8% 1px;
+        text-align: left;
+
+    }
+
+    #small-nav-3 ul{
+        margin-left: -46px;
+        margin-top: -3px;
+        position: fixed;
+      }
+
+    #small-nav-3 ul li{
+        display: inline;
+        font-size: 27px;
+        color: white;
+      }
+
+      #small-nav-3 ul li a {
+        color: white;
+      }
+
+
+    
+    .bottom-nav-wrapper{
+        background-color: #14487C;
+        padding: 1px;
+        height: 65px;
+        color:white;
+        font-size: 200%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "bottom-nav-1 bottom-nav-2 bottom-nav-3 bottom-nav-4 bottom-nav-5";
+    
+    }
+    
+
+   /* wrapper */
+.navbar-wrapper{
+
+    display: grid;
+    height: 100vh;
+    width:100%;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    " navbar-userdetails";
+    display: none;
+}
+
+.navbar-userdetails-first{
+    display: none;
+    }
+
+    .navbar-userdetails-second{
+      
+        grid-area: navbar-userdetails-second;
+        background: #1A3045;
+        line-height: 10vh;
+        font-size: 100%;
+        width: 110%;
+        }
+
+        .navbar-userdetails-second ul li {
+            display: inline;
+            word-spacing: 10px;
+            color: white;
+            font-size: 100%;
+            text-align: center;
+        }
+
+      
+
+
+}
