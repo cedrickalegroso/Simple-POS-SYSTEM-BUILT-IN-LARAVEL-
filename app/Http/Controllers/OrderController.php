@@ -79,11 +79,13 @@ class OrderController extends Controller
         ->Where('cashier', $cashier)
         ->sum('fullpayment');
 
+        $overallstatorder= Order::where('cashier', $cashier )
+        ->count();
 
         $overallstat= Order::where('cashier', $cashier)
         ->sum('fullpayment');
 
-        return view('ordersuccesspage' , ['orders' => $orders, 'statgio' => $statgio, 'statjirald' => $statjirald, 'statjam' => $statjam, 'statearl' => $statearl, 'overallstat' => $overallstat ]);
+        return view('ordersuccesspage' , ['orders' => $orders, 'statgio' => $statgio, 'statjirald' => $statjirald, 'statjam' => $statjam, 'statearl' => $statearl, 'overallstat' => $overallstat, 'overallstatorder' => $overallstatorder ]);
           
     }
 
@@ -121,7 +123,12 @@ class OrderController extends Controller
         $overallstat= Order::where('cashier', $cashier)
         ->sum('fullpayment');
 
-        return view('cashierstats' , ['statgio' => $statgio, 'statjirald' => $statjirald, 'statjam' => $statjam, 'statearl' => $statearl, 'overallstat' => $overallstat ]);
+        $overallstatorder= Order::where('cashier', $cashier )
+        ->count();
+
+       
+
+        return view('cashierstats' , ['statgio' => $statgio, 'statjirald' => $statjirald, 'statjam' => $statjam, 'statearl' => $statearl, 'overallstat' => $overallstat, 'overallstatorder' => $overallstatorder ]);
           
     }
 
@@ -135,6 +142,8 @@ class OrderController extends Controller
       //params 
 
       $cashier = Auth::user()->name;
+
+      $orders = Order::all();
 
 
         $statgio= Order::where('groupleader', "Gio")
@@ -156,7 +165,11 @@ class OrderController extends Controller
 
         $overallstat= Order::sum('fullpayment');
 
-        return view('overallstat' , ['statgio' => $statgio, 'statjirald' => $statjirald, 'statjam' => $statjam, 'statearl' => $statearl, 'overallstat' => $overallstat ]);
+        $overallstatorder= Order::count();
+
+       
+
+        return view('overallstat' , ['statgio' => $statgio, 'statjirald' => $statjirald, 'statjam' => $statjam, 'statearl' => $statearl, 'overallstat' => $overallstat, 'overallstatorder' => $overallstatorder, 'orders' => $orders ]);
           
     }
 

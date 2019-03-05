@@ -8,7 +8,7 @@
 
 <div class="container text-center">
         <h3 > <a href="/home" > Go back to order Page </a>  </h3>
-
+     
     <div class="row">
         <div class="col-md-6">
                 <div class="card p-2">
@@ -68,8 +68,9 @@
 
         <div class="col-md-6 text-center">
                 <div class="card p-2">
-                        <h3 class="text-success text-center">  Todays Stats </h3> 
+                        <h3 class="text-success text-center">  Today's Stats </h3> 
                           <h4 class="text-center text-success"> {{$overallstat}}PHP </h4>
+                          <p class="text-success text-center"> Today's Order count : {{$overallstatorder}} orders </p>
                         <div class="text-left">
                                 <p> Per group Earnings  </p>
                                 <hr> 

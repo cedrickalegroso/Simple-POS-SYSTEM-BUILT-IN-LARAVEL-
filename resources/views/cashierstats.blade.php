@@ -9,6 +9,7 @@
 
    <div class="card text-left p-2 border-primary shadow">
         <h3 class="text-success text-center"> Today Overall Earnings : {{$overallstat}}PHP </h3>
+        <p class="text-success text-center"> Today Order count : {{$overallstatorder}} orders </p>
         <p> Per group todays Earnings  </p>
         <hr> 
             <p> Gio: {{$statgio}}  </p>
